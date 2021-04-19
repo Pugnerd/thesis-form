@@ -33,6 +33,7 @@ input[type="checkbox"] {
 	border-radius: 10px;
 	display: flex;
 	justify-content: center;
+	min-width: 250px;
 }
 #personal {
 	font-family: 'Poppins', sans-serif;
@@ -88,3 +89,61 @@ justify-content: center;
 #second {
 	text-align: left;
 }
+
+#dropdown-list {
+	margin: 10px;
+	color: black;
+	font-weight: lighter;
+	font-family: 'Times New Roman', Times, serif;
+}
+
+.submit {
+	display: flex;
+	justify-content: center;
+	margin: 20px;
+}
+
+/* button */
+button {
+  font-size: 2em;
+  background: rgb(229, 233, 18);
+  color: rgb(34, 139, 25);
+  border: 0.25rem solid rgb(229, 233, 18);
+	border-radius: 10px;
+  padding: 0.85em 0.75em;
+  margin: 1rem;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+button:hover {
+  color: rgb(229, 233, 18);
+	cursor: pointer;
+}
+button::after {
+  content: "";
+  background: rgb(34, 139, 25);
+  position: absolute;
+  z-index: -1;
+  padding: 0.85em 0.75em;
+  display: block;
+}
+
+button[class^="grow"]::after {
+  transition: all 0.25s ease;
+}
+button[class^="grow"]:hover::after {
+  transition: all 0.25s ease-out;
+}
+button.grow_box::after {
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  transform: scale(0, 0);
+}
+button.grow_box:hover::after {
+  transform: scale(1, 1);
+}
+/* button end */
+

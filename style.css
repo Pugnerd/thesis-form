@@ -20,7 +20,10 @@ h1 {
 	font-size: 20px;
 }
 input[type="radio"] {
-	margin: 30px;
+	margin: 10px;
+}
+input[type="checkbox"] {
+	margin: 10px;
 }
 .form-container {
 	margin: 0 auto;
@@ -81,7 +84,7 @@ justify-content: center;
 	margin: 20px;
 	font-size: 18px;
 	line-height: 25px;
-	width: 80vw;
+	width: 79vw;
 }
 #second {
 	text-align: left;

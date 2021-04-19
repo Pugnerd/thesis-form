@@ -1,0 +1,88 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body {
+	background-color: rgb(34, 139, 25);
+}
+.head {
+	margin: 30px;
+	color: rgb(229, 233, 18);
+	text-align: center;
+}
+h1 {
+	font-size: 40px;
+	text-align: center;
+}
+.thanks {
+	margin: 20px;
+	font-size: 20px;
+}
+.form-container {
+	margin: 0 auto;
+	background-color: rgb(229, 233, 18);
+	width: 50vw;
+	height: auto;
+	border-radius: 10px;
+	display: flex;
+	justify-content: center;
+}
+#personal {
+	font-family: 'Poppins', sans-serif;
+	font-size: 20px;
+	text-align: center;
+	margin: 20px;
+}
+
+label {
+	color: rgb(34, 71, 31);
+	font-family: 'Raleway', sans-serif;
+	font-weight: bold;
+	margin: 5px;
+}
+#age {
+	margin: 30px;
+}
+.gender {
+	margin: 10px;
+	display: flex;
+	justify-content: center;
+}
+
+/* personal vége */
+.main-form {
+margin: 20px auto;
+background-color: rgb(229, 233, 18);
+width: 85vw;
+height: auto;
+border-radius: 10px;
+display: flex;
+justify-content: center;
+}
+
+.first {
+	margin: 20px;
+	line-height: 25px;
+	font-size: 18px;
+}
+
+#first {
+	font-size: 20px;
+	text-align: center;
+	line-height: 30px;
+}
+hr {
+	background-color: seashell;
+	border: 1px solid red;
+}
+/*  */
+.second {
+	margin: 20px;
+	font-size: 18px;
+	line-height: 25px;
+	width: 80vw;
+}
+#second {
+	text-align: left;
+}

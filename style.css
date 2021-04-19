@@ -4,7 +4,9 @@
 	box-sizing: border-box;
 }
 body {
-	background-color: rgb(34, 139, 25);
+	/* background-color: rgb(34, 139, 25); */
+	background: url(pal.jpg);
+	background-repeat: no-repeat;
 }
 .head {
 	margin: 30px;
@@ -61,22 +63,11 @@ label {
 .main-form {
 margin: 20px auto;
 background-color: rgb(229, 233, 18);
-width: 85vw;
+width: 80vw;
 height: auto;
 border-radius: 10px;
 display: flex;
 justify-content: center;
-}
-
-.first {
-	margin: 30px;
-	line-height: 25px;
-	font-size: 18px;
-}
-
-#first {
-	text-align: center;
-	line-height: 30px;
 }
 
 /*  */

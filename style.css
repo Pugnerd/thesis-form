@@ -5,16 +5,17 @@
 }
 body {
 	/* background-color: rgb(34, 139, 25); */
-	background: url(pal.jpg);
-	background-repeat: no-repeat;
+	background: url(wall.jpg);
+	background-size: cover;
 }
 .head {
 	margin: 30px;
 	color: rgb(229, 233, 18);
 	text-align: center;
+	background-color: rgba(0, 0, 0, 0.4);
 }
 h1 {
-	font-size: 40px;
+	font-size: 60px;
 	text-align: center;
 }
 .thanks {
@@ -45,10 +46,11 @@ input[type="checkbox"] {
 }
 
 label {
-	color: rgb(34, 71, 31);
+	color: rgb(34, 139, 25);
 	font-family: 'Poppins', sans-serif;
 	font-weight: bold;
 	margin: 5px;
+	font-size: 23px;
 }
 #age {
 	margin: 30px;
@@ -113,7 +115,7 @@ button:hover {
 }
 button::after {
   content: "";
-  background: rgb(34, 139, 25);
+  background: rgb(72, 185, 170);
   position: absolute;
   z-index: -1;
   padding: 0.85em 0.75em;

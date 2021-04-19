@@ -43,7 +43,7 @@ input[type="checkbox"] {
 
 label {
 	color: rgb(34, 71, 31);
-	font-family: 'Raleway', sans-serif;
+	font-family: 'Poppins', sans-serif;
 	font-weight: bold;
 	margin: 5px;
 }
@@ -74,7 +74,6 @@ justify-content: center;
 }
 
 #first {
-	font-size: 20px;
 	text-align: center;
 	line-height: 30px;
 }

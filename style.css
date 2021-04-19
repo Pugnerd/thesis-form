@@ -19,6 +19,9 @@ h1 {
 	margin: 20px;
 	font-size: 20px;
 }
+input[type="radio"] {
+	margin: 30px;
+}
 .form-container {
 	margin: 0 auto;
 	background-color: rgb(229, 233, 18);
@@ -62,7 +65,7 @@ justify-content: center;
 }
 
 .first {
-	margin: 20px;
+	margin: 30px;
 	line-height: 25px;
 	font-size: 18px;
 }
@@ -72,10 +75,7 @@ justify-content: center;
 	text-align: center;
 	line-height: 30px;
 }
-hr {
-	background-color: seashell;
-	border: 1px solid red;
-}
+
 /*  */
 .second {
 	margin: 20px;

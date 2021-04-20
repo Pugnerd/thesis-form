@@ -15,10 +15,10 @@ body {
 	background-color: rgba(0, 0, 0, 0.4);
 }
 h1 {
-	font-size: 60px;
+	font-size: 5vw;
 	text-align: center;
 }
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 440px) {
 	h1 {
 	font-size: 30px;
 	}
@@ -26,7 +26,7 @@ h1 {
 
 .thanks {
 	margin: 20px;
-	font-size: 20px;
+	font-size: 25px;
 }
 input[type="radio"] {
 	margin: 10px;
@@ -36,61 +36,87 @@ input[type="checkbox"] {
 }
 .form-container {
 	margin: 0 auto;
-	background-color: rgb(229, 233, 18);
+	background-image: linear-gradient(to bottom right,rgb(248, 248, 10), rgb(241, 248, 149));
 	width: 50vw;
 	height: auto;
 	border-radius: 10px;
 	display: flex;
 	justify-content: center;
+	align-items: center;
 	min-width: 250px;
 }
 #personal {
-	font-family: 'Poppins', sans-serif;
-	font-size: 20px;
+	color: rgb(15, 75, 9);
+	font-weight: bold;
+	font-family: 'Roboto', sans-serif;
+	font-size: 25px;
 	text-align: center;
 	margin: 20px;
 }
 
 label {
-	color: rgb(34, 139, 25);
-	font-family: 'Poppins', sans-serif;
+	color: rgb(15, 75, 9);
+	font-family: 'Roboto', sans-serif;
 	font-weight: bold;
-	margin: 5px;
 	font-size: 23px;
+	line-height: 32px;
 }
+/* .details {
+	display: flex;
+	justify-content: center;
+} */
+
 #age {
-	margin: 30px;
+	margin: 0 auto;
+	display: flex;
+	justify-content: center;
 }
 .gender {
-	margin: 10px;
+	margin-top: 30px;
 	display: flex;
 	justify-content: center;
 }
 
+#genderchange {
+	margin-top: -15px;
+	margin-left: 15px;
+	font-size: 18px;
+}
+
 /* personal vége */
 .main-form {
-margin: 20px auto;
-background-color: rgb(229, 233, 18);
-width: 80vw;
+margin: 40px auto;
+background-image: linear-gradient(to bottom right,rgb(248, 248, 10), rgb(241, 248, 149));
+width: 65vw;
 height: auto;
 border-radius: 10px;
 display: flex;
 justify-content: center;
+min-width: 300px;
 }
 
 /*  */
 .second {
-	margin: 20px;
-	font-size: 18px;
-	line-height: 25px;
+	margin: 40px;
+	font-size: 20px;
 	width: 79vw;
 }
 #second {
 	text-align: left;
 }
+#questions {
+	margin-top: -10px;
+	line-height: 25px;
+}
+#answers {
+	margin-bottom: -15px;
+	margin-top: 20px;
+	font-weight: 500;
+	line-height: 38px;
+}
 
 #dropdown-list {
-	font-size: 18px;
+	font-size: 20px;
 	margin: 10px;
 	color: black;
 	font-weight: lighter;
@@ -147,3 +173,43 @@ button.grow_box:hover::after {
 }
 /* button end */
 
+
+input[type=text] {
+	background-color: rgb(44, 180, 26);
+	height: 25px;
+	margin: 10px;
+      border: none; /* <-- This thing here */
+      /* border:solid 1px #ccc; */
+      border-radius: 5px;
+	font-size: 17px;
+	color:rgb(58, 52, 52);
+}
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: rgb(53, 51, 51);
+  opacity: 1; /* Firefox */
+}
+input[type=number] {
+
+	background-color: rgb(44, 180, 26);
+	height: 25px;
+	width: 50px;
+	margin-left: 15px;
+	margin-top: 4px;
+      border: none; /* <-- This thing here */
+      /* border:solid 1px #ccc; */
+      border-radius: 5px;
+	font-size: 17px;
+	color:rgb(53, 51, 51);
+}
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: rgb(53, 51, 51);
+  opacity: 1; /* Firefox */
+}
+
+
+#empty {
+	text-align: center;
+	font-size: 38px;
+	color: rgb(15, 75, 9);
+	font-weight: bold;
+}

@@ -213,3 +213,35 @@ input[type=number] {
 	color: rgb(15, 75, 9);
 	font-weight: bold;
 }
+
+#autoform {
+	background: url(wall.jpg);
+	background-size: cover;
+}
+
+#questions {
+	font-weight: bold;
+}
+
+.send_fixed {
+	position:fixed;
+	top: 10px;
+	left: 10px;
+}
+
+#data {
+	background-color: white;
+	max-width: 100vw;
+	overflow: auto;
+
+}
+#stats {
+	border: 1px solid black;
+	border-collapse: collapse;
+}
+
+th {
+	padding: 10px;
+	background-color: white;
+	border: 1px solid gray;
+}

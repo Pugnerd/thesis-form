@@ -10,10 +10,31 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
-	<script src="script.js"></script>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+<script src="script.js"></script>
 </head>
 <body>
-	<form action="">
+	<button id="btn_data">DATA QUESTIONNAIRE</button>
+	<button id="btn_stats">DATA STATS</button>
+	<div id="tmpl" class="main-form">
+		<div class="second">
+		<div id="questions">
+				</div>
+				<div id="answers">
+			</div>
+			</div>
+	</div>
+	<div class="data">
+		<table id="stats" class="table table-bordered">
+
+		</table>
+
+	</div>
+	<form method="POST" id="autoform" action="http://localhost:2700/form">
+		<input type="submit" class="send_fixed">
+	</form>
+	 <!-- <form method="POST" action="http://localhost:2700/questionnaire">
 		<div class="head">
 			<h1>Kérdőív a <br> "COVID19 hatásai az utaztatási szektorra" <br> c. szakdolgozatomhoz </h1>
 			<p class="thanks">Köszönöm, hogy segíted a munkámat!</p>
@@ -43,17 +64,17 @@
 				<label id="second" for="second">	1.	Utazott-e Ön szabadidejében bárhová a COVID-19 pandémia magyarországi kirobbanása (2020 március) óta? <br> (Több választ is megjelölhet) </label> <br>
 				</div>
 				<div id="answers">
-				<input type="checkbox"> Igen, 2020 tavaszán (március-május) belföldön <br>
-				<input type="checkbox"> Igen, 2020 tavaszán (március-május) külföldre<br>
-				<input type="checkbox"> Igen, 2020 nyarán (június – augusztus) belföldön<br>
-				<input type="checkbox"> Igen, 2020 nyarán (június – augusztus) külföldre<br>
-				<input type="checkbox"> Igen, 2020 őszén (szeptember – november) belföldön<br>
-				<input type="checkbox"> Igen, 2020 őszén (szeptember – november) külföldre<br>
-				<input type="checkbox"> Igen, 2020/21 telén (december – február) belföldön<br>
-				<input type="checkbox"> Igen, 2020/21 telén (december – február) külföldre<br>
-				<input type="checkbox"> Igen, 2021 márciusa óta belföldön<br>
-				<input type="checkbox"> Igen, 2021 márciusa óta külföldre<br>
-				<input type="checkbox"> Nem utaztam sehová<br>
+				<input type="checkbox" name="utazott-e" value="március-május belföld"> Igen, 2020 tavaszán (március-május) belföldön <br>
+				<input type="checkbox" name="utazott-e" value="március-május külföld"> Igen, 2020 tavaszán (március-május) külföldre<br>
+				<input type="checkbox" name="utazott-e" value="június-augusztus belföld">   Igen, 2020 nyarán (június – augusztus) belföldön<br>
+				<input type="checkbox" name="utazott-e" value="június-augusztus külföld"> Igen, 2020 nyarán (június – augusztus) külföldre<br>
+				<input type="checkbox" name="utazott-e" value="szeptember-november belföld"> Igen, 2020 őszén (szeptember – november) belföldön<br>
+				<input type="checkbox" name="utazott-e" value="szeptember-november külföld"> Igen, 2020 őszén (szeptember – november) külföldre<br>
+				<input type="checkbox" name="utazott-e" value="december-február belföld"> Igen, 2020/21 telén (december – február) belföldön<br>
+				<input type="checkbox" name="utazott-e" value="december-február külföld"> Igen, 2020/21 telén (december – február) külföldre<br>
+				<input type="checkbox" name="utazott-e" value="2021 márc óta belföld"> Igen, 2021 márciusa óta belföldön<br>
+				<input type="checkbox" name="utazott-e" value="2021 márc óta külföld"> Igen, 2021 márciusa óta külföldre<br>
+				<input type="checkbox" name="utazott-e" value="nem utaztam"> Nem utaztam sehová<br>
 				</div>
 			</div>
 		</div>
@@ -63,11 +84,11 @@
 				<label for="second" id="second">2. Tervez-e utazást 2021 májusa után? </label> <br>
 				</div>
 				<div id="answers">
-				<input type="radio" name="second">	Igen, de csak belföldre <br>
-				<input type="radio" name="second"> Igen, külföldi utazást tervezek <br>
-				<input type="radio" name="second"> Igen, külföldre és belföldön egyaránt utazni fogok <br>
-				<input type="radio" name="second"> Erre az évre még semmiképpen sem tervezek <br>
-				<input type="radio" name="second"> Még nem tudom, a járványhelyzettől függ <br>
+				<input type="radio" name="tervez-e" value="csak belföld">	Igen, de csak belföldre <br>
+				<input type="radio" name="tervez-e" value="csak külföld"> Igen, külföldi utazást tervezek <br>
+				<input type="radio" name="tervez-e" value="külföld-belföld"> Igen, külföldre és belföldön egyaránt utazni fogok <br>
+				<input type="radio" name="tervez-e" value="nem tervezek"> Erre az évre még semmiképpen sem tervezek <br>
+				<input type="radio" name="tervez-e" value="még nem tudom"> Még nem tudom, a járványhelyzettől függ <br>
 				</div>
 			</div>
 		</div>
@@ -77,10 +98,10 @@
 				<label for="second" id="second">3. A COVID-19 pandémia kirobbanása ELŐTT vette-e igénybe az utazási irodák szolgáltatásait? </label> <br>
 				</div>
 				<div id="answers">
-				<input type="radio" name="third">	Igen, de csak valamilyen részszolgáltatást (szállást, repülőjegyet stb.) foglaltam<br>
-				<input type="radio" name="third"> Igen, teljes utazási csomagot vásároltam <br>
-				<input type="radio" name="third"> Egyéb, és pedig: <input type="text"> <br>
-				<input type="radio" name="third"> Nem vettem igénybe <br>
+				<input type="radio" name="COVID-előtt szolgáltatás">	Igen, de csak valamilyen részszolgáltatást (szállást, repülőjegyet stb.) foglaltam<br>
+				<input type="radio" name="COVID-előtt szolgáltatás"> Igen, teljes utazási csomagot vásároltam <br>
+				<input type="radio" name="COVID-előtt szolgáltatás"> Egyéb, és pedig: <input type="text"> <br>
+				<input type="radio" name="COVID-előtt szolgáltatás"> Nem vettem igénybe <br>
 			</div>
 			</div>
 		</div>
@@ -239,7 +260,7 @@
 				</div>
 				<div id="answers">
 				<label for="price" id="dropdown-list">Az utazásra fordított összeg (ár): </label>
-				<select id="dropdown"> 	 <br>
+				<select id="dropdown" name="question[q12][cost]"> 	 <br>
 					<option value="default">Kérem válasszon!</option>
 					<option value=" very important"> 	Nagyon fontos <br>
 					<option value="important">	Inkább fontos <br>
@@ -247,7 +268,7 @@
 					<option value=" not important"> 	Egyáltalán nem fontos <br>
 				</select> <br>
 				<label for="particular" id="dropdown-list">Legyen egyedi, különleges, emlékezetes az utazás: </label>
-				<select id="dropdown"> 	 <br>
+				<select id="dropdown" name="question[q12][be_unique]"> 	 <br>
 					<option value="default">Kérem válasszon!</option>
 					<option value=" very important"> 	Nagyon fontos <br>
 					<option value="important">	Inkább fontos <br>
@@ -255,7 +276,7 @@
 					<option value=" not important"> 	Egyáltalán nem fontos <br>
 				</select> <br>
 				<label for="germicide" id="dropdown-list">Legyen biztonságos: </label>
-				<select id="dropdown"> 	 <br>
+				<select id="dropdown" name="question[q12][be_safe]"> 	 <br>
 					<option value="default">Kérem válasszon!</option>
 					<option value=" very important"> 	Nagyon fontos <br>
 					<option value="important">	Inkább fontos <br>
@@ -263,7 +284,7 @@
 					<option value=" not important"> 	Egyáltalán nem fontos <br>
 				</select> <br>
 				<label for="no crowd" id="dropdown-list">Ingyenes lemondás: </label>
-				<select id="dropdown"> 	 <br>
+				<select id="dropdown" name="question[q12][free_cancellation]"> 	 <br>
 					<option value="default">Kérem válasszon!</option>
 					<option value=" very important"> 	Nagyon fontos <br>
 					<option value="important">	Inkább fontos <br>
@@ -279,8 +300,8 @@
 				<label for="second" id="second">13. Ön mennyire tartja fontosnak, hogy ebben az időszakban az utazási irodák nagyobb hangsúlyt kapjanak a médiában?</label> <br>
 				</div>
 				<div id="answers">
-				<input type="radio" name="thirteenth"> 	Fontos, mert keveset hallok róla <br>
-				<input type="radio" name="thirteenth"> 	Nem érdekel <br>
+				<input type="radio" name="question[q13][fontos]"> 	Fontos, mert keveset hallok róla <br>
+				<input type="radio" name="question[q13][nem_erdekel]"> 	Nem érdekel <br>
 				</div>
 			</div>
 		</div>
@@ -290,16 +311,16 @@
 				<label for="second" id="second">14. Kérem, sorolja fel azt a 3 fogalmat, amit Ön elvár egy utazási irodától: </label> <br>
 				</div>
 				<div id="answers">
-				<input type="text" placeholder="Ide írjon">	 <br>
-				<input type="text" placeholder="Ide írjon">	 <br>
-				<input type="text" placeholder="Ide írjon">	 <br>
+				<input type="text" name="q14_1" placeholder="Ide írjon">	 <br>
+				<input type="text" name="q14_2" placeholder="Ide írjon">	 <br>
+				<input type="text" name="q14_3" placeholder="Ide írjon">	 <br>
 				</div>
 			</div>
 		</div>
-	</form>
-	<div class="submit">
-		<button class="grow_box" type="submit">ELKÜLD</button>
-	</div>
+		<div class="submit">
+			<button class="grow_box" type="submit">ELKÜLD</button>
+		</div>
+	</form> -->
 	<div id="empty"></div>
 </body>
 </html>
